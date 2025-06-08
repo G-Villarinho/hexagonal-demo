@@ -28,6 +28,8 @@ services:
     depends_on:
       postgres_db:
         condition: service_healthy 
+      redis_cache: 
+        condition: service_started
 
   pgadmin:
     image: dpage/pgadmin4
@@ -40,6 +42,14 @@ services:
     depends_on:
       postgres_db:
         condition: service_healthy
+      
+
+
+  redis_cache:
+    image: redis:7-alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
 
 volumes:
   postgres-data:

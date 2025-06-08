@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS projects (
+    id uuid PRIMARY KEY,
+    user_id uuid NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NULL DEFAULT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_users FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_projects_user_id ON projects(user_id);

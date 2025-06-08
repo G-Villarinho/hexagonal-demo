@@ -8,7 +8,10 @@ require (
 )
 
 require (
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/go-chi/chi/v5 v5.2.1 // indirect
+	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
 )
@@ -21,5 +24,6 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/o1egl/paseto v1.0.0
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/sashabaranov/go-openai v1.40.1
 	golang.org/x/sys v0.33.0 // indirect
 )

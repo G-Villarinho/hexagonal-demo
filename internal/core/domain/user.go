@@ -8,12 +8,12 @@ import (
 )
 
 type User struct {
-	ID        string       `json:"id"`
-	Name      string       `json:"name"`
-	Email     string       `json:"email"`
-	Password  string       `json:"-"`
-	CreatedAt time.Time    `json:"created_at"`
-	UpdatedAt sql.NullTime `json:"updated_at"`
+	ID        string
+	Name      string
+	Email     string
+	Password  string
+	CreatedAt time.Time
+	UpdatedAt sql.NullTime
 }
 
 func (u *User) HashPassword() error {
