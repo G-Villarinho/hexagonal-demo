@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como um estudo prático e aprofundado sobre Arquit
 A aplicação consiste em uma API RESTful para gerenciar usuários, autenticação e projetos, com uma integração de IA para geração de conteúdo.
 
 
-## 🏛 Arquitetura: Hexagonal (Ports & Adapters)
+## Arquitetura: Hexagonal (Ports & Adapters)
 A Arquitetura Hexagonal foi escolhida para isolar a lógica de negócio principal (o "núcleo" ou "core") das dependências externas, como banco de dados, APIs de terceiros e a própria interface HTTP.
 
 Core (Domínio): Contém a lógica de negócio pura, sem qualquer conhecimento sobre o mundo exterior.
@@ -15,6 +15,9 @@ Core (Domínio): Contém a lógica de negócio pura, sem qualquer conhecimento s
 Ports (Portas): São as interfaces definidas pelo core que atuam como contratos. Elas definem o que a aplicação precisa fazer, mas não como.
 
 Adapters (Adaptadores): São as implementações concretas das portas. Eles traduzem a comunicação entre o core e as ferramentas externas.
+
+![Diagrama da arquitetura hexagonal do projeto](docs/images/arquitetura.png)
+
 ## Funcionalidades Implementadas
 
 - Autenticação de Usuários: Cadastro e Login com autenticação via token Paseto (uma alternativa segura ao JWT).
