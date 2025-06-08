@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  go_api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+
+    volumes:
+      - .:/app
